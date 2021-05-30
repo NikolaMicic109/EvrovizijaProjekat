@@ -138,17 +138,33 @@ function shuffleNodes1()
         ++i;
     }
 }
-function changePlace (){
-    
-}
+
+
+
 
 
 shuffleNodes()
 shuffleNodes1()
+
+
     
 
 }
 
 
 generateLists(podaci)
+function changePlace (){
+    var temp;
+    var a = document.querySelector(".scene-container").children[Math.floor(Math.random()*11)];
+    
+   var b =  document.querySelector(".backstage-container").children[Math.floor(Math.random()*4)];
+   
+   temp = a.innerHTML;
+   a.innerHTML=b.innerHTML;
+   b.innerHTML = temp
+   document.querySelector(".rezultat").innerHTML = `Na binu je umesto ${b.firstChild.textContent} izašao ${a.firstChild.textContent}`
+   
+   
+}
+setInterval(changePlace, 15000) 
 

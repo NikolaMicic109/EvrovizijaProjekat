@@ -32,9 +32,20 @@ h2{
     color:#555555;
     text-align: center;
     margin:0 auto;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    margin-bottom: 40px;
+    margin-top: 40px;
 }
+
+h4{
+    color:#555555;
+    margin: 0 auto;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+
 
 div{
     display: flex;

@@ -128,6 +128,7 @@ function generateLists(a) {
         }
         return cached;
     }
+
     function shuffleNodes() {
         var nodes = sceneContainer.children, i = 0;
         nodes = Array.prototype.slice.call(nodes);
@@ -137,6 +138,8 @@ function generateLists(a) {
             ++i;
         }
     }
+
+
     function shuffleNodes1() {
         var nodes = backstageContainer.children, i = 0;
         nodes = Array.prototype.slice.call(nodes);
@@ -146,17 +149,8 @@ function generateLists(a) {
             ++i;
         }
     }
-
-
-
-
-
     shuffleNodes()
     shuffleNodes1()
-
-
-
-
 }
 
 
@@ -166,15 +160,13 @@ generateLists(podaci)
 function changePlace() {
     var temp;
     var a = document.querySelector(".scene-container").children[Math.floor(Math.random() * 11)];
-
     var b = document.querySelector(".backstage-container").children[Math.floor(Math.random() * 4)];
 
     temp = a.innerHTML;
     a.innerHTML = b.innerHTML;
     b.innerHTML = temp
     document.querySelector(".rezultat").innerHTML = `Na binu je umesto ${b.firstChild.textContent} izašao ${a.firstChild.textContent}`
-
-
 }
-setInterval(changePlace, 3000)
+
+setInterval(changePlace, 2000)
 

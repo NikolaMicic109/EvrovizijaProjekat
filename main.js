@@ -95,9 +95,8 @@ var podaci = [
 function generateLists(a) {
     var sceneContainer = document.querySelector(".scene-container")
     var backstageContainer = document.querySelector(".backstage-container")
-    var image = document.createElement('img')
-    // for (var i = ul.children.length; i >= 0; i--) {
-    //     ul.appendChild(ul.children[Math.random() * i | 0]);
+
+
 
     for (var i = 0; i < a.length; i++) {
         var ul = document.createElement("ul")
@@ -107,7 +106,7 @@ function generateLists(a) {
             if (j === 1) li.textContent = Object.keys(a[i])[j] + ": " + a[i].age
             if (j === 2) li.textContent = Object.keys(a[i])[j] + ": " + a[i].instrument
             if (j === 3) li.innerHTML = `<img src="${a[i].image}"/>`
-            console.log(a[i].image)
+
 
 
             ul.appendChild(li)
@@ -162,6 +161,8 @@ function generateLists(a) {
 
 
 generateLists(podaci)
+
+
 function changePlace() {
     var temp;
     var a = document.querySelector(".scene-container").children[Math.floor(Math.random() * 11)];
